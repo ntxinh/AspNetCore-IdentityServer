@@ -5,7 +5,7 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "IdentityServer-Dev",
+      "name": "IDP-Dev",
       "type": "coreclr",
       "request": "launch",
       "preLaunchTask": "build",
@@ -39,7 +39,7 @@
     {
       "name": "Run-All-Dev",
       "configurations": [
-        "IdentityServer-Dev",
+        "IDP-Dev",
         "Api-Dev"
       ]
     }
