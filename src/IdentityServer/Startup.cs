@@ -30,7 +30,7 @@ namespace IdentityServer
             //services.AddControllersWithViews();
 
             var migrationsAssembly = typeof(Startup).GetTypeInfo().Assembly.GetName().Name;
-            string connectionString = Configuration.GetConnectionString("DefaultConnection");
+            var connectionString = Configuration.GetConnectionString("DefaultConnection");
 
             var builder = services.AddIdentityServer(options =>
             {

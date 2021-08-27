@@ -1,0 +1,35 @@
+POST https://localhost:5001/connect/token HTTP/1.1
+content-type: application/x-www-form-urlencoded
+
+client_id=client
+&client_secret=secret
+&scope=api1
+&grant_type=client_credentials
+
+###
+
+POST https://localhost:5001/connect/token HTTP/1.1
+content-type: application/x-www-form-urlencoded
+
+client_id=ro.client
+&client_secret=secret
+&scope=api1 offline_access
+&grant_type=password
+&username=alice
+&password=alice
+
+###
+
+POST https://localhost:5001/connect/token HTTP/1.1
+content-type: application/x-www-form-urlencoded
+
+client_id=ro.client
+&client_secret=secret
+&grant_type=refresh_token
+&refresh_token={{refreshToken}}
+
+###
+
+GET https://localhost:6001/identity HTTP/1.1
+content-type: application/json
+Authorization: Bearer {{accessToken}}
